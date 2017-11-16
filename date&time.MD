@@ -18,3 +18,7 @@ sdf.setTimeZone(TimeZone.getTimeZone("GMT")); // 注意设置时区，默认是�
 Date = sdf.parse("201708051200");
 ```
 y 年，M 月，d 日，h 时，在上午或下午，H 时，在一天中，m 分，s 秒，S 毫秒，E 星期
+
+
+3. Calendar
+Calendar = Date(time since epoch) + timezone + locale
