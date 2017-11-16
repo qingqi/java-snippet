@@ -3,7 +3,10 @@
 ```java
 static final long MILLISECONDS_IN_A_DAY = 24 * 60 * 60 * 1000;
 
-Date date = new Date(); // now, From the source code, the no-arg constructor invokes System.currentTimeMillis() to get the milliseconds since January 1, 1970, 00:00:00 GMT (known as "epoch") and stores in a private variable fastTime.
+// now, From the source code, the no-arg constructor invokes System.currentTimeMillis() to get 
+// the milliseconds since January 1, 1970, 00:00:00 GMT (known as "epoch") and stores in a private variable fastTime.
+// Take note that epoch is absolute and does not depends on local time zones.
+Date date = new Date(); 
 long time = date.getTime(); // Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT
 Date dawn = new Date(time - time % MILLISECONDS_IN_A_DAY); // dawn of today
 ```
